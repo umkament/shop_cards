@@ -1,12 +1,17 @@
-import './index.css'
-export const Header = () => {
+import "./index.css";
+import { Link } from 'react-router-dom';
+import {Cards} from "../../2_Cards";
+import {Cart} from "../AppBarSearch/Cart";
 
-  return <div className='header'>
-    <div className='navigation'>
-      <a href="" className='color'>Main</a>
-      <a href="" className='color'>Cards</a>
-      <a href="" className='color'>Cart</a>
-    </div>
-  </div>
-
-}
+export const Navigation = () => {
+  return (
+     <nav>
+       <Link to="/">
+         <Cards />
+       </Link>
+       <Link to="/cart">
+         <Cart />
+       </Link>
+     </nav>
+  );
+};

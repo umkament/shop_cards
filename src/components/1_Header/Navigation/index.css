@@ -1,12 +1,11 @@
-.header {
-    height: 80px;
-    background-color: lightslategrey;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.nav {
+  width: 330px;
+  border: 1px solid black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-around;
+.color {
+  color: white;
 }
