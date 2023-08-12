@@ -5,6 +5,7 @@ import {Cart} from "./components/1_Header/AppBarSearch/Cart";
 import {Footer} from "./components/3_Footer";
 import {Route, Routes} from 'react-router-dom';
 import {Container} from "@mui/material";
+import {ProductDetailsPage} from "./pages/ProductDetailsPage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   <Routes>
     <Route path='/' element={<Cards/>}/>
     <Route path='/cart' element={<Cart/>}/>
+    <Route path='/product/:id' element={<ProductDetailsPage/>}/>
     <Route path='*' element={<h1>404: PAGE NOT FOUND</h1>}/>
   </Routes>
 </Container>

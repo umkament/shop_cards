@@ -8,6 +8,7 @@ export const Footer = () => {
   return (
          <div className='footer'>
           <Contacts/>
+
          </div>
 
   )

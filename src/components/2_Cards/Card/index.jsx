@@ -3,6 +3,7 @@ import {addProductToCart, removeProductToCart} from "../../../slices/cartSlice";
 import {Button} from "@mui/material";
 import './index.css'
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 export const Card = ({ product }) => {
   console.log("Card");
@@ -32,15 +33,17 @@ export const Card = ({ product }) => {
        </div>
 
 
-       <div className='image-container'>
-         <div className='main-image' >
-           <img  src={imageLink} alt={description} />
+
+
+           <img className='main-image' src={imageLink} alt={description} />
+
+         <div>
+           {images.map(image=><img className='small-image' onClick={()=>changeImg(image)} key={image} src={image} alt={`dop info + ${title}`}/>)}
+
          </div>
 
-         {images.map(image=><img className='small-image' onClick={()=>changeImg(image)} key={image} src={image} alt={`dop info + ${title}`}/>)}
 
 
-       </div>
        <h3>
          {title}
        </h3>
@@ -52,7 +55,7 @@ export const Card = ({ product }) => {
        <Button variant='outlined' onClick={addHandler}> +</Button>
        {cartItem?.quantity}
        {cartItem?.quantity && <Button variant='outlined' onClick={removeHandler}> -</Button>}
-
+<Link to={`/product/${id}`}>details</Link>
      </div>
 
   );
